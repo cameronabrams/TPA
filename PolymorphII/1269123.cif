@@ -1,0 +1,77 @@
+####################################################################### 
+# 
+# This file contains crystal structure data downloaded from the 
+# Cambridge Structural Database (CSD) hosted by the Cambridge 
+# Crystallographic Data Centre (CCDC).
+# 
+# Full information about CCDC data access policies and citation 
+# guidelines are available at http://www.ccdc.cam.ac.uk/access/V1 
+# 
+# Audit and citation data items may have been added by the CCDC. 
+# Please retain this information to preserve the provenance of 
+# this file and to allow appropriate attribution of the data. 
+# 
+#######################################################################
+
+data_TEPHTH01
+#This CIF has been generated from an entry in the Cambridge Structural Database
+_database_code_depnum_ccdc_archive 'CCDC 1269123'
+_database_code_CSD               TEPHTH01
+loop_
+_citation_id
+_citation_doi
+_citation_year
+1 10.1107/S0365110X67000751 1967
+_audit_creation_method           'Created from the CSD'
+_audit_update_record             
+;
+2021-04-23 downloaded from the CCDC.
+;
+_database_code_NBS               527181
+_chemical_name_common            'Benzene-p-dicarboxylic acid'
+_chemical_formula_moiety         'C8 H6 O4'
+_chemical_name_systematic        'Terephthalic acid'
+_chemical_absolute_configuration unk
+_diffrn_ambient_temperature      295
+_exptl_crystal_density_diffrn    1.597
+#These two values have been output from a single CSD field.
+_refine_ls_R_factor_gt           0.164
+_refine_ls_wR_factor_gt          0.164
+_diffrn_radiation_probe          x-ray
+_symmetry_cell_setting           triclinic
+_symmetry_space_group_name_H-M   'P -1'
+_symmetry_Int_Tables_number      2
+_space_group_name_Hall           '-P 1'
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 x,y,z
+2 -x,-y,-z
+_cell_length_a                   9.54(1)
+_cell_length_b                   5.34(1)
+_cell_length_c                   5.02(1)
+_cell_angle_alpha                86.95(5)
+_cell_angle_beta                 134.65(5)
+_cell_angle_gamma                104.90(5)
+_cell_volume                     172.767
+_cell_formula_units_Z            1
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+C1 C 0.147 -0.002 0.000
+C2 C 0.175 0.217 0.184
+C3 C -0.031 -0.224 -0.186
+C4 C 0.301 -0.007 0.003
+O1 O 0.461 0.196 0.181
+O2 O 0.275 -0.209 -0.158
+C3A C 0.031 0.224 0.186
+C2A C -0.175 -0.217 -0.184
+C1A C -0.147 0.002 0.000
+C4A C -0.301 0.007 -0.003
+O1A O -0.461 -0.196 -0.181
+O2A O -0.275 0.209 0.158
+
+#END
