@@ -15,9 +15,9 @@ set gamma [expr [lindex $p 5]*$d2r]
 set o_a $a
 set xy [expr $b*cos($gamma)]
 set xz [expr $c*cos($beta)]
-set ly [expr sqrt($b$b-$xy*$xy)]
+set ly [expr sqrt($b*$b-$xy*$xy)]
 set yz [expr ($b*$c*cos($alpha)-$xy*$xz)/$ly]
-set lz [expr sqrt($c*$c-$xz$*$xz-$yz*$yz)]
+set lz [expr sqrt($c*$c-$xz*$xz-$yz*$yz)]
 set o_b $ly
 set o_c $lz
 lset p 0 $o_a
