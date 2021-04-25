@@ -26,8 +26,9 @@ lset p 2 $o_c
 lset p 3 90.000
 lset p 4 90.000
 lset p 5 90.000
+#pbc set $p
+pbc wrap -orthorhombic
 pbc set $p
-#pbc wrap
 #pbc wrap -shiftcenter {4.5 2.5 2}
 set a [atomselect top all]
 #$a moveby {-4.5 -2.5 -2}
