@@ -4,7 +4,6 @@ mol new 1x1x1_p.pdb
 mol delete top
 mol new 1x1x1_p1.pdb
 
-pbc wrap -orthorhombic
 set p [lindex [pbc get] 0]
 set a [lindex $p 0]
 set b [lindex $p 1]
@@ -20,10 +19,11 @@ lset p 3 90.000
 lset p 4 90.000
 lset p 5 90.000
 pbc set $p
-pbc wrap -shiftcenter {4.5 2.5 2}
+pbc wrap -orthorhombic
+#pbc wrap -shiftcenter {4.5 2.5 2}
 set a [atomselect top all]
-$a moveby {-4.5 -2.5 -2}
-$a set resname UB7
+#$a moveby {-4.5 -2.5 -2}
+#$a set resname UB7
 
 $a writepdb "1x1x1_o.pdb"
 
