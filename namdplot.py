@@ -1,8 +1,13 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import scipy.constants as sc
+import argparse as ap
 
-log = 'solv.log'
+parser=ap.ArgumentParser()
+parser.add_argument('-l',metavar="log",type=str,default='cryst.log',help="Name of namd log file")
+args=parser.parse_args()
+
+log = args.l
 df = pd.DataFrame()
 with open(log) as f:
     for line in f:
@@ -28,6 +33,6 @@ ax[0].set_ylabel('Density (g/cm$^3$)')
 ax[1].plot(df['TS']*ts/1.e6,df['POTENTIAL'])
 ax[1].set_ylabel('Potential Energy (kcal/mol)')
 ax[1].set_xlabel('Time (ns)')
-ax[0].set_ylim([1.46,1.50])
+ax[0].set_ylim([1.4,1.6])
 plt.savefig('rho-e.png')
 
