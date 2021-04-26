@@ -43,7 +43,9 @@ $mol1 set name $names
 # wrap +b
 [atomselect top "index 8 11"] moveby [vecscale $ucellbasisvector1 -1]
 [atomselect top "index 0 3"] moveby [vecscale $ucellbasisvector2 -1]
-[atomselect top "index 2 5 7 9 10"] moveby [vecscale [vecadd $ucellbasisvector1 [vecadd $ucellbasisvector2 $ucellbasisvector3]] -1]
+[atomselect top "index 5"] moveby [vecscale [vecadd $ucellbasisvector2 $ucellbasisvector3] -1]
+[atomselect top "index 9"] moveby [vecscale [vecadd $ucellbasisvector1 $ucellbasisvector3] -1]
+[atomselect top "index 2 7 10"] moveby [vecscale [vecadd $ucellbasisvector1 [vecadd $ucellbasisvector2 $ucellbasisvector3]] -1]
 
 $mol1 writepdb "unitcell_mol1.pdb"
 exit
