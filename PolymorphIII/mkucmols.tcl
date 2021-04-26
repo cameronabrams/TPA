@@ -17,6 +17,7 @@ set ucellbasisvector3 [list [expr $c*cos($beta)] [expr $c*(cos($alpha)-cos($beta
 
 set ucellV [expr $a*$b*$c*sqrt(1+2*cos($alpha)*cos($beta)*cos($gamma)-pow(cos($alpha),2)-pow(cos($beta),2)-pow(cos($gamma),2))]
 
+# molecule 1
 set indices1 {0 2 3 5 6 7 8 20 23 24 25 37}
 dict set atomnames1 0 "O1"
 dict set atomnames1 2 "C6"
@@ -43,17 +44,34 @@ set mol1_wrapatoms [atomselect top "index 0 2 3 5 8 25"]
 set mv [vecadd $ucellbasisvector1 $ucellbasisvector3]
 $mol1_wrapatoms moveby $mv
 $mol1 writepdb "unitcell_mol1.pdb"
-exit
-set mol2 [atomselect top "index 4 5 6 7 18 19 24 25 26 27 38 39"]
+
+# molecule 2
+set indices2 {9 10 11 12 21 22 26 27 28 29 38 39}
+dict set atomnames2 9 "O1"
+dict set atomnames2 10 "O3"
+dict set atomnames2 11 "O4"
+dict set atomnames2 12 "O2"
+dict set atomnames2 21 "C6"
+dict set atomnames2 22 "C3"
+dict set atomnames2 26 "C1"
+dict set atomnames2 27 "C2"
+dict set atomnames2 28 "C4"
+dict set atomnames2 29 "C5"
+dict set atomnames2 38 "C7"
+dict set atomnames2 39 "C8"
+set names [list]
+foreach id [dict keys $atomnames2] {
+    lappend names [dict get $atomnames2 $id]
+}
+set mol2 [atomselect top "index $indices2"]
 $mol2 set resname "UB7"
 $mol2 set resid 2
-$mol2 set name {"O1" "O3" "O4" "O2" "C6" "C3" "C1" "C2" "C4" "C5" "C7" "C8"}
-
-set lx [lindex [lindex $p 0] 0]
-set moveus [atomselect top "resid 2 and name C1 C5 C6 C7 O1 O2"]
-$moveus moveby [list $lx 0 0]
-
-$mol1 writepdb "unitcell_mol1.pdb"
+$mol2 set name $names
+set mol2_wrapatoms_c [atomselect top "index 9 12 21 26 29 38"]
+# wrap +c
+$mol2_wrapatoms_c moveby $ucellbasisvector3
+set mol2_wrapatoms_b [atomselect top "index 11 28"]
+$mol2_wrapatoms_b moveby $ucellbasisvector2
 $mol2 writepdb "unitcell_mol2.pdb"
 
 exit
