@@ -56,8 +56,8 @@ BOND O4   H4
 BOND O1   H1
 BOND C2   H2  
 BOND C3   H3  
-BOND C4   H4  
 BOND C5   H5  
+BOND C6   H6  
 IMPR C7     C1     O2     O1    
 IMPR C8     C4     O3     O4    
 
