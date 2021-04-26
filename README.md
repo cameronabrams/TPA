@@ -26,9 +26,9 @@ Cell: a 8.940(2)Å b 10.442(2)Å c 3.7900(10)Å, α 90° β 91.21(3)° γ 90°
 2. OpenBabel: fill unit cell
    - `obabel 154875.cif -opdb -O uc.pdb --fillUC keepconnect`
 2. VMD: 
-   - `uc.pdb` -> Script `mkucmols.tcl` renames atoms, resid, resnames, removes all H's -> `unitcell_mol1.pdb` and `unitcell_mol2.pdb`
+   - `uc.pdb` -> Script `mkucmols.tcl` renames atoms, resid, resnames -> `unitcell_mol1.pdb` and `unitcell_mol2.pdb`
 3. OpenBabel to add protons:
-   - `obabel unitcell_mol1.pdb -p 1 -O ub7.mol2`
+   - `obabel unitcell_mol1.pdb -O ub7.mol2`
 4. CharmmGenFF:
    - paramchem.org: upload `ub7.mol2`, download `ub7.str`
    - manually add H IC's to ub7.str
