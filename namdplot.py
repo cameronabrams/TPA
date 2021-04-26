@@ -33,6 +33,6 @@ ax[0].set_ylabel('Density (g/cm$^3$)')
 ax[1].plot(df['TS']*ts/1.e6,df['POTENTIAL'])
 ax[1].set_ylabel('Potential Energy (kcal/mol)')
 ax[1].set_xlabel('Time (ns)')
-ax[0].set_ylim([1.4,1.6])
+ax[0].set_ylim([1.0,1.6])
 plt.savefig('rho-e.png')
 
