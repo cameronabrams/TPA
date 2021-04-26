@@ -30,10 +30,10 @@ ATOM C7     CG2O2   0.457 !    0.000                         ||   |
 ATOM C8     CG2O2   0.457 !    0.000                     H5--C5  C3--H3
 ATOM H1     HGP1    0.429 !    0.000                          \ //
 ATOM H4     HGP1    0.429 !    0.000                           C4
-ATOM H2     HGR64   0.115 !    0.000                           |
-ATOM H3     HGR64   0.115 !    0.000                           C8
-ATOM H5     HGR64   0.115 !    0.000                          / \\
-ATOM H6     HGR64   0.115 !    0.000                         O4  O3
+ATOM H2     HGR61   0.115 !    0.000                           |
+ATOM H3     HGR61   0.115 !    0.000                           C8
+ATOM H5     HGR61   0.115 !    0.000                          / \\
+ATOM H6     HGR61   0.115 !    0.000                         O4  O3
 IC C7 C1 C2 H2 0 0 0 120 0.94 !                              |
 IC C7 C1 C6 H6 0 0 0 120 0.94 !                              H4
 IC C8 C4 C3 H3 0 0 0 120 0.94
@@ -81,7 +81,7 @@ DIHEDRALS
 IMPROPERS
 
 NONBONDED
-HGR64    0.0       -0.0460     0.5000
+!HGR64    0.0       -0.0460     0.5000
 
 END
 
