@@ -33,7 +33,6 @@ Cell: a 8.940(2)Å b 10.442(2)Å c 3.7900(10)Å, α 90° β 91.21(3)° γ 90°
    - paramchem.org: upload `ub7.mol2`, download `ub7.str`
    - manually add H IC's to ub7.str
 5. VMD:
-   - `ortho_unitcell_mol1.pdb` and `ortho_unitcell_mol2.pdb`-> `mkcrystpsf.tcl` -> `my_ub7_unitcell.psf` and `my_ub7_unitcell.pdb`
-   - Test a vacuum MD simulation using `vac.namd` -> `my_ub7_vac.dcd`
-   - Script `maksupercellpsf.tcl` makes a supercell -> `my_ub7_supercell.psf`, `my_ub7_supercell.pdb`, and `cell.inp`
-   - Test an NPT MD with `solv.namd`
+   - `unitcell_mol1.pdb` and `unitcell_mol2.pdb`-> `mkcrystpsf.tcl` -> `my_ub7_unitcell.psf` and `my_ub7_unitcell.pdb`
+   - Script `mksupercellpsf.tcl` makes a supercell -> `my_ub7_supercell.psf`, `my_ub7_supercell.pdb`, and `cell.inp`
+   - Test an NPT MD with `cryst.namd`
