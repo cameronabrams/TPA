@@ -100,6 +100,7 @@ for {set i 0} {$i < $nx} {incr i} {
         for {set k 0} {$k < $nz} {incr k} {
             coordpdb ${ci}.pdb A
             incr ci
+#            exec rm ${ci}.pdb
         }
     }
 }
