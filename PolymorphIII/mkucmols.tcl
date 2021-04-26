@@ -70,7 +70,7 @@ $mol2 set name $names
 set mol2_wrapatoms_c [atomselect top "index 9 12 21 26 29 38"]
 # wrap +c
 $mol2_wrapatoms_c moveby $ucellbasisvector3
-set mol2_wrapatoms_b [atomselect top "index 11 28"]
+set mol2_wrapatoms_b [atomselect top "index 11 12 28 29"]
 $mol2_wrapatoms_b moveby $ucellbasisvector2
 $mol2 writepdb "unitcell_mol2.pdb"
 
