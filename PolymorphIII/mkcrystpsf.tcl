@@ -8,7 +8,7 @@ topology /home/cfa/charmm/toppar/top_all36_carb.rtf
 topology /home/cfa/charmm/toppar/top_all36_lipid.rtf
 topology /home/cfa/charmm/toppar/top_all36_na.rtf
 topology /home/cfa/charmm/toppar/top_all36_cgenff.rtf
-topology ./ub7.str
+topology ../charmm/ub7.str
 
 segment A {
     pdb unitcell_mol1.pdb

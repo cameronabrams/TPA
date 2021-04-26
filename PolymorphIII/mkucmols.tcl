@@ -1,6 +1,6 @@
 package require pbctools
 
-mol new 1x1x1.pdb  # contains two molecules
+mol new uc.pdb  # contains two molecules
 set p [pbc get]
 
 set heavies [atomselect top "noh"]

@@ -45,9 +45,9 @@ set sc_c [expr $nz * $c]
 puts "Supercell $sc_a x $sc_b x $sc_c $nc cells with $sc_na atoms in $sc_nr residues"
 
 set fp [open "cell.inp" "w"]
-puts $fp "cellbasisvector1 [expr $nx*[lindex $ucellbasisvector1 0] [expr $ny*[lindex $ucellbasisvector1 1] [expr $nz*[lindex $ucellbasisvector1 2]"
-puts $fp "cellbasisvector2 [expr $nx*[lindex $ucellbasisvector2 0] [expr $ny*[lindex $ucellbasisvector2 1] [expr $nz*[lindex $ucellbasisvector2 2]"
-puts $fp "cellbasisvector3 [expr $nx*[lindex $ucellbasisvector3 0] [expr $ny*[lindex $ucellbasisvector3 1] [expr $nz*[lindex $ucellbasisvector3 2]"
+puts $fp "cellbasisvector1 [expr $nx*[lindex $ucellbasisvector1 0]] [expr $ny*[lindex $ucellbasisvector1 1]] [expr $nz*[lindex $ucellbasisvector1 2]]"
+puts $fp "cellbasisvector2 [expr $nx*[lindex $ucellbasisvector2 0]] [expr $ny*[lindex $ucellbasisvector2 1]] [expr $nz*[lindex $ucellbasisvector2 2]]"
+puts $fp "cellbasisvector3 [expr $nx*[lindex $ucellbasisvector3 0]] [expr $ny*[lindex $ucellbasisvector3 1]] [expr $nz*[lindex $ucellbasisvector3 2]]"
 puts $fp "cellorigin 0 0 0"
 close $fp
 
@@ -60,10 +60,10 @@ for {set i 0} {$i < $nx} {incr i} {
         set jmvb [vecscale $ucellbasisvector2 $j]
         for {set k 0} {$k < $nz} {incr k} {
             set kmvb [vecscale $ucellbasisvector3 $k]
-            set mvb [vecadd $ivmb [vecadd $jmvb $kmvb]
+            set mvb [vecadd $imvb [vecadd $jmvb $kmvb]]
             $base set {x y z} $x0
             $base set resid $r0
-            $base moveby $mbv
+            $base moveby $mvb
             set this_resid []
             for {set r 0} {$r < [llength $r0]} {incr r} {
                 lappend this_resid [expr [lindex $r0 $r]+2*$ci]
@@ -81,7 +81,7 @@ topology /home/cfa/charmm/toppar/top_all36_carb.rtf
 topology /home/cfa/charmm/toppar/top_all36_lipid.rtf
 topology /home/cfa/charmm/toppar/top_all36_na.rtf
 topology /home/cfa/charmm/toppar/top_all36_cgenff.rtf
-topology ./ub7.str
+topology ../charmm/ub7.str
 
 segment A {
     set ci 0
